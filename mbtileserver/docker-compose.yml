@@ -1,0 +1,55 @@
+version: "3"
+
+services:
+  mbtile-server:
+    image: consbio/mbtileserver:0.9.0
+    environment:
+      # TILE_DIR: "./path/to/your/tiles"
+      - VERBOSE=true
+    entrypoint: /mbtileserver --enable-reload-signal
+    ports:
+      - 8080:8000
+    volumes:
+      - ../data/tilesets:/tilesets
+    networks:
+      - imap-network
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  resource-server:
+    image: resourceserver:latest
+    environment:
+      - PORT=8001
+      - LOG_LEVEL=trace
+      - BASE_URL=http://10.10.26.152/imap/apis
+      - NODE_ENV=production
+    ports:
+      - 8081:8001
+    networks:
+      - imap-network
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+networks:
+  imap-network:
+    external: true
