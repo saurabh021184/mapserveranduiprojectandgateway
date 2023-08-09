@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: "jc21/nginx-proxy-manager:latest"
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    volumes:
+      - ../data/gateway:/data
+    #   - ./letsencrypt:/etc/letsencrypt
+    networks:
+      - imap-network
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+networks:
+  imap-network:
+    external: true
