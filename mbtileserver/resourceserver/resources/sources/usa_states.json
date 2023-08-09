@@ -1,0 +1,44 @@
+{
+    "name": "/home/sajjadhussain/coding/GIS/app/data/mbtilefiles/usa_states.mbtiles",
+    "description": "/home/sajjadhussain/coding/GIS/app/data/mbtilefiles/usa_states.mbtiles",
+    "version": "2",
+    "minzoom": 0,
+    "maxzoom": 16,
+    "center": [
+        -170.6847,
+        -14.293075,
+        16
+    ],
+    "bounds": [
+        -170.6847,
+        -14.293075,
+        145.213452,
+        62.888721
+    ],
+    "type": "overlay",
+    "format": "pbf",
+    "generator": "tippecanoe v1.36.0",
+    "generator_options": "tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/STATE_label.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/usa_states.mbtiles",
+    "vector_layers": [
+        {
+            "id": "STATE_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "STATEFP": "String",
+                "STATENS": "String"
+            },
+            "source": "usa_states",
+            "source_name": "usa_states"
+        }
+    ],
+    "scheme": "xyz",
+    "tilejson": "2.2.0",
+    "tiles": [
+        "{host}/tilesets/usa_states/tiles/{z}/{x}/{y}.pbf"
+    ]
+}

@@ -1,0 +1,4675 @@
+{
+    "version": 8,
+    "name": "US-CAN-V1",
+    "metadata": {
+      "mapbox:autocomposite": true,
+      "mapbox:type": "template",
+      "mapbox:sdk-support": {
+        "js": "1.9.0",
+        "android": "8.6.0",
+        "ios": "5.6.0"
+      },
+      "mapbox:trackposition": false,
+      "mapbox:groups": {
+        "95fc991f7dd0499e701c850e5164f218": {
+          "name": "Road Tunnels",
+          "collapsed": true
+        },
+        "a73c3ca237f7ad1f353ce3404d8197e1": {
+          "name": "Rail",
+          "collapsed": true
+        },
+        "75fa5af1dd46c946641ecc7963186118": {
+          "name": "Roads",
+          "collapsed": true
+        },
+        "daf94b6337851569665c1fa8d1fb7a0e": {
+          "name": "Tunnel Traffic",
+          "collapsed": true
+        },
+        "9a2fd16b16b16dffda9fc42bcfd27071": {
+          "name": "Country and State Labels",
+          "collapsed": true
+        },
+        "6e7130c136b695af553d704a5c6d60a1": {
+          "name": "Lines",
+          "collapsed": true
+        },
+        "846b4d8fe72eaee67a87edee73a7d2ef": {
+          "name": "Settlements",
+          "collapsed": true
+        },
+        "7666ab2107339734f492e34366f5b5e4": {
+          "name": "Road Labels",
+          "collapsed": true
+        },
+        "b1efe2fc8af97eef294e287ea5cab6e8": {
+          "name": "Borders",
+          "collapsed": true
+        },
+        "f3707bbc2415ebea1c7f12a64db75443": {
+          "name": "Traffic",
+          "collapsed": true
+        },
+        "37e6229e6dd6e9308a99ef22eeb25554": {
+          "name": "POIs",
+          "collapsed": true
+        },
+        "2f6641263107636dc7fbcbae46f436af": {
+          "name": "Water Labels",
+          "collapsed": true
+        },
+        "ce977a3ecd8eb571c73286e654187d27": {
+          "name": "Road Bridges",
+          "collapsed": true
+        },
+        "abb42a322bf85bd188b5720d376652a2": {
+          "name": "2-D Buildings",
+          "collapsed": true
+        },
+        "cb5f5170750354066845943e2ec2a6cb": {
+          "name": "Water Area",
+          "collapsed": true
+        },
+        "ecd50c6ac3288efedc155bd6a5df986e": {
+          "name": "Grounds Labels",
+          "collapsed": true
+        },
+        "5b1f88eca661d3dd510f2be4fe2d3064": {
+          "name": "Grounds",
+          "collapsed": true
+        }
+      },
+      "mapbox:uiParadigm": "layers"
+    },
+    "center": [-73.622131, 41.027571],
+    "zoom": 16,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+      "BaseMap": {
+        "url": "{host}/resources/sources/ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads.json",
+        "type": "vector"
+      }
+    },
+    "sprite": "{host}/resources/sprites/sprite",
+    "glyphs": "{host}/resources/fonts/{fontstack}/{range}.pbf",
+    "layers": [
+      {
+        "id": "Background",
+        "type": "background",
+        "paint": {
+          "background-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(45, 40%, 98%)",
+            12,
+            "#ffffff",
+            16,
+            "hsl(42, 100%, 97%)"
+          ]
+        }
+      },
+      {
+        "id": "Indian Reservations",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["RESERVATION"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "rgba(247, 241, 233, 1)"
+        }
+      },
+      {
+        "id": "Military Bases",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["MILITARY"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(93, 15%, 97%)"
+        }
+      },
+      {
+        "id": "Built-Up Areas",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["BUILT_UP"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "rgba(246, 247, 247, 1)",
+          "fill-opacity": {
+            "stops": [
+              [7, 0],
+              [7.5, 1]
+            ]
+          }
+        }
+      },
+      {
+        "id": "City Parks",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["PARK_CITY"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(85, 50%, 80%)"
+        }
+      },
+      {
+        "id": "Golf Courses",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["GOLF"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(85, 50%, 80%)"
+        }
+      },
+      {
+        "id": "Cemetaries",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["CEMETARY"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(85, 50%, 80%)"
+        }
+      },
+      {
+        "id": "Airports",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["AIRPORT"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(0, 0%, 93%)"
+        }
+      },
+      {
+        "id": "Campuses",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": [
+          "match",
+          ["get", "AREAUSAGE"],
+          [
+            "HOSPITAL",
+            "INDUSTRIAL",
+            "SHOPPING_CENTER",
+            "UNIVERSITY",
+            "SPORTS_COMPLEX"
+          ],
+          true,
+          false
+        ],
+        "layout": {},
+        "paint": {
+          "fill-color": [
+            "match",
+            ["get", "AREAUSAGE"],
+            ["UNIVERSITY"],
+            "#fcebcb",
+            ["SPORT_COMPLEX"],
+            "hsl(198, 81%, 94%)",
+            ["SHOPPING_CENTER"],
+            "hsl(48, 83%, 93%)",
+            ["HOSPITAL"],
+            "#fceae8",
+            "rgba(233,222,211,50%)"
+          ]
+        }
+      },
+      {
+        "id": "Woodlands",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "5b1f88eca661d3dd510f2be4fe2d3064"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["WOODLAND"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(85, 44%, 88%)",
+          "fill-opacity": {
+            "stops": [
+              [9, 0],
+              [10, 1]
+            ]
+          }
+        }
+      },
+      {
+        "id": "Airport Runways and Taxiways (Polygon)",
+        "type": "fill",
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["RUNWAY"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            "#c7cadc",
+            16,
+            "hsl(230, 37%, 84%)"
+          ]
+        }
+      },
+      {
+        "id": "Local Lakes Bays Oceans",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "cb5f5170750354066845943e2ec2a6cb"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": [
+          "match",
+          ["get", "AREAUSAGE"],
+          ["LAKE", "BAYHARBOUR", "OCEAN"],
+          true,
+          false
+        ],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(203, 61%, 78%)"
+        }
+      },
+      {
+        "id": "Local Rivers",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "cb5f5170750354066845943e2ec2a6cb"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygons",
+        "filter": ["match", ["get", "AREAUSAGE"], ["RIVER"], true, false],
+        "layout": {},
+        "paint": {
+          "fill-color": "hsl(203, 61%, 78%)",
+          "fill-opacity": ["interpolate", ["linear"], ["zoom"], 8, 0, 9, 1, 22, 1]
+        }
+      },
+      {
+        "id": "Not Drivable Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["NotDrivable"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "#a8a8a8",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Walkway Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "#cbcbcb",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Unpaved Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Unpaved"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Private Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Private"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 20],
+          "line-color": "hsl(0, 0%, 66%)"
+        }
+      },
+      {
+        "id": "Bus Only Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["BusOnly"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 4, 22, 24],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Ramp Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Ramp", "TollRamp"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            4.5,
+            16,
+            12,
+            22,
+            35
+          ],
+          "line-color": "#a8a8a8",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Interchange Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 9,
+        "filter": [
+          "all",
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            ["Interchange", "TollInterchange"],
+            true,
+            false
+          ],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "#a8a8a8",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            5,
+            16,
+            7,
+            22,
+            30
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Local Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Local"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            4.5,
+            16,
+            6,
+            22,
+            35
+          ],
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Normal Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 0.5, 22, 28],
+          "line-color": "#cccccc",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Regional Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11.99,
+            0,
+            12,
+            2,
+            22,
+            27
+          ],
+          "line-color": "#999999",
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Highway Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Highway", "TollRoad"], true, false],
+          ["match", ["get", "FUNCLASS"], ["1"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 11, 3, 22, 30],
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#ffffff",
+            12,
+            "#c5c5c5",
+            22,
+            "hsl(0, 0%, 66%)"
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Carpool Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Carpool"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            9,
+            22,
+            28
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "National Road Tunnel Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          [
+            "any",
+            [
+              "match",
+              ["get", "LINEUSAGE"],
+              ["TollMotorway", "Motorway"],
+              true,
+              false
+            ],
+            [
+              "all",
+              [
+                "match",
+                ["get", "LINEUSAGE"],
+                ["TollRoad", "Highway"],
+                true,
+                false
+              ],
+              ["match", ["get", "FUNCLASS"], ["1"], true, false]
+            ]
+          ],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "#ffffff",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11,
+            1,
+            16,
+            11,
+            22,
+            38
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Not Drivable Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["NotDrivable"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Walkway Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Unpaved Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 10,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Unpaved"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            10,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Private Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Private"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            13,
+            1,
+            16,
+            4,
+            22,
+            20
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Bus Only Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["BusOnly"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 22, 22],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Ramp Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Ramp", "TollRamp"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            1,
+            16,
+            10,
+            22,
+            28
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Interchange Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 9,
+        "filter": [
+          "all",
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            ["Interchange", "TollInterchange"],
+            true,
+            false
+          ],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "hsl(41, 92%, 62%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            4.5,
+            22,
+            24
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Local Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Local"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            13,
+            1,
+            16,
+            4,
+            22,
+            20
+          ],
+          "line-opacity": {
+            "stops": [
+              [11, 0],
+              [12, 0.3]
+            ]
+          }
+        }
+      },
+      {
+        "id": "Normal Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "#ebebeb",
+            11,
+            "hsl(0, 0%, 84%)",
+            12,
+            "#ffffff"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0,
+            16,
+            1,
+            22,
+            36
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Regional Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 7,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 92%)",
+            11,
+            "hsl(0, 0%, 84%)",
+            12,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            10,
+            1,
+            11,
+            1,
+            12,
+            1,
+            22,
+            24
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Highway Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Highway", "TollRoad"], true, false],
+          ["match", ["get", "FUNCLASS"], ["1"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            9,
+            "#ebebeb",
+            10.99,
+            "#d6d6d6",
+            11,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            9,
+            1,
+            11,
+            1,
+            22,
+            26
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Carpool Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Carpool"], true, false],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#f7bf45",
+            16,
+            "#f7bf45",
+            17,
+            "hsl(41, 92%, 62%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            4.5,
+            22,
+            24
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "National Road Tunnel",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "95fc991f7dd0499e701c850e5164f218"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          [
+            "any",
+            [
+              "match",
+              ["get", "LINEUSAGE"],
+              ["TollMotorway", "Motorway"],
+              true,
+              false
+            ],
+            [
+              "all",
+              [
+                "match",
+                ["get", "LINEUSAGE"],
+                ["TollRoad", "Highway"],
+                true,
+                false
+              ],
+              ["match", ["get", "FUNCLASS"], ["1"], true, false]
+            ]
+          ],
+          ["match", ["get", "DCTUNNEL"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "hsl(41, 92%, 62%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            7,
+            0.25,
+            16,
+            7,
+            22,
+            38
+          ],
+          "line-opacity": 0.3
+        }
+      },
+      {
+        "id": "Airport Runways and Taxiways",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "6e7130c136b695af553d704a5c6d60a1"
+        },
+        "source": "BaseMap",
+        "source-layer": "polylines",
+        "minzoom": 11,
+        "filter": [
+          "match",
+          ["get", "WAYUSAGE"],
+          ["RUNWAY", "TAXIWAY"],
+          true,
+          false
+        ],
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            "#c7cadc",
+            16,
+            "hsl(230, 37%, 84%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["exponential", 1.5],
+            ["zoom"],
+            9,
+            ["match", ["get", "WAYUSAGE"], ["RUNWAY"], 1, 0.5],
+            18,
+            ["match", ["get", "WAYUSAGE"], ["RUNWAY"], 80, 20]
+          ]
+        }
+      },
+      {
+        "id": "River and Creek Lines",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "6e7130c136b695af553d704a5c6d60a1"
+        },
+        "source": "BaseMap",
+        "source-layer": "polylines",
+        "minzoom": 11,
+        "filter": ["match", ["get", "WAYUSAGE"], ["WATERWAY"], true, false],
+        "layout": {},
+        "paint": {
+          "line-color": "hsl(203, 61%, 78%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11,
+            1,
+            12,
+            1,
+            13,
+            2,
+            18,
+            2,
+            20,
+            4,
+            22,
+            8
+          ],
+          "line-opacity": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11,
+            0,
+            12,
+            1,
+            22,
+            1
+          ]
+        }
+      },
+      {
+        "id": "Water Ferry Lines",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "6e7130c136b695af553d704a5c6d60a1"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "filter": ["match", ["get", "LINEUSAGE"], ["FerryBoat"], true, false],
+        "layout": {
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(202, 69%, 46%)",
+          "line-width": ["step", ["zoom"], 0, 4, 1, 20, 2],
+          "line-gap-width": ["interpolate", ["linear"], ["zoom"], 0, 0, 22, 0],
+          "line-dasharray": [3, 3]
+        }
+      },
+      {
+        "id": "Not Drivable Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["NotDrivable"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "hsl(0, 0%, 66%)"
+        }
+      },
+      {
+        "id": "Unpaved Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Unpaved"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "hsl(0, 0%, 66%)"
+        }
+      },
+      {
+        "id": "Walkway Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 16, 0.5, 22, 18],
+          "line-color": "hsl(0, 0%, 80%)"
+        }
+      },
+      {
+        "id": "Parking Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": ["match", ["get", "LINEUSAGE"], ["Parking"], true, false],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            2,
+            16,
+            3,
+            22,
+            19.5
+          ],
+          "line-color": "hsl(0, 0%, 66%)"
+        }
+      },
+      {
+        "id": "Private Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Private"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 20],
+          "line-color": "hsl(0, 0%, 66%)"
+        }
+      },
+      {
+        "id": "Bus Only Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["BusOnly"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 4, 22, 24]
+        }
+      },
+      {
+        "id": "Ramp Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Ramp", "TollRamp"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            4.5,
+            16,
+            6,
+            22,
+            22
+          ],
+          "line-color": "#a8a8a8"
+        }
+      },
+      {
+        "id": "Interchange Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 9,
+        "filter": [
+          "all",
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            ["Interchange", "TollInterchange"],
+            true,
+            false
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 100%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            9,
+            22,
+            28
+          ]
+        }
+      },
+      {
+        "id": "Local Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Local"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            4.5,
+            16,
+            6,
+            22,
+            22
+          ],
+          "line-color": "#a8a8a8"
+        }
+      },
+      {
+        "id": "Normal Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            14,
+            4,
+            16,
+            5,
+            22,
+            25
+          ],
+          "line-color": "#999999"
+        }
+      },
+      {
+        "id": "Regional Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11.99,
+            0,
+            12,
+            2,
+            22,
+            26
+          ],
+          "line-color": "#999999"
+        }
+      },
+      {
+        "id": "Highway Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Highway", "TollRoad"], true, false],
+          ["match", ["get", "FUNCLASS"], ["1"], false, true],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 11, 3, 22, 30],
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#ffffff",
+            10,
+            "hsl(0, 0%, 84%)",
+            22,
+            "hsl(0, 0%, 66%)"
+          ]
+        }
+      },
+      {
+        "id": "Carpool Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Carpool"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "#d0f5ed",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            7,
+            22,
+            28
+          ]
+        }
+      },
+      {
+        "id": "National Road Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          [
+            "any",
+            [
+              "match",
+              ["get", "LINEUSAGE"],
+              ["TollMotorway", "Motorway"],
+              true,
+              false
+            ],
+            [
+              "all",
+              [
+                "match",
+                ["get", "LINEUSAGE"],
+                ["TollRoad", "Highway"],
+                true,
+                false
+              ],
+              ["match", ["get", "FUNCLASS"], ["1"], true, false]
+            ]
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 100%)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 15, 9, 22, 40]
+        }
+      },
+      {
+        "id": "Not Drivable",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["NotDrivable"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16]
+        }
+      },
+      {
+        "id": "Unpaved",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 10,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Unpaved"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            10,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16]
+        }
+      },
+      {
+        "id": "Walkway",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": ["step", ["zoom"], "#dbdbdb", 17, "#efefef"],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 0.5, 22, 16]
+        }
+      },
+      {
+        "id": "Parking",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": ["match", ["get", "LINEUSAGE"], ["Parking"], true, false],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            0,
+            16,
+            2,
+            22,
+            18
+          ]
+        }
+      },
+      {
+        "id": "Private",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Private"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            13,
+            1,
+            16,
+            4,
+            22,
+            20
+          ]
+        }
+      },
+      {
+        "id": "Bus Only",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["BusOnly"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 89%)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 22, 22]
+        }
+      },
+      {
+        "id": "Ramp",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Ramp", "TollRamp"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            13,
+            1,
+            16,
+            4,
+            22,
+            20
+          ]
+        }
+      },
+      {
+        "id": "Interchange",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 9,
+        "filter": [
+          "all",
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            ["Interchange", "TollInterchange"],
+            true,
+            false
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            "#f7bf45",
+            16,
+            "hsl(40, 85%, 87%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            4.5,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "Local",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Local"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            13,
+            1,
+            16,
+            4,
+            22,
+            20
+          ],
+          "line-opacity": {
+            "stops": [
+              [11, 0],
+              [12, 1]
+            ]
+          }
+        }
+      },
+      {
+        "id": "Normal",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "#dbdbdb",
+            12,
+            "#dbdbdb",
+            14,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0, 16, 4, 22, 24]
+        }
+      },
+      {
+        "id": "Regional",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 7,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 92%)",
+            11,
+            "hsl(0, 0%, 84%)",
+            12,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            10,
+            1,
+            11,
+            1,
+            12,
+            1,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "Highway",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Highway", "TollRoad"], true, false],
+          ["match", ["get", "FUNCLASS"], ["1"], false, true],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            9,
+            "#d6d6d6",
+            10.99,
+            "hsl(0, 0%, 84%)",
+            11,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 9, 1, 11, 1, 22, 26]
+        }
+      },
+      {
+        "id": "Carpool",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Carpool"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#f7bf45",
+            16,
+            "#f7bf45",
+            17,
+            "hsl(41, 92%, 62%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            4.5,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "National Road",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "75fa5af1dd46c946641ecc7963186118"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          [
+            "any",
+            [
+              "match",
+              ["get", "LINEUSAGE"],
+              ["TollMotorway", "Motorway"],
+              true,
+              false
+            ],
+            [
+              "all",
+              [
+                "match",
+                ["get", "LINEUSAGE"],
+                ["TollRoad", "Highway"],
+                true,
+                false
+              ],
+              ["match", ["get", "FUNCLASS"], ["1"], true, false]
+            ]
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], false, true],
+          ["match", ["get", "DCTUNNEL"], ["T"], false, true]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(41, 92%, 62%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            7,
+            0.25,
+            15,
+            6,
+            22,
+            38
+          ]
+        }
+      },
+      {
+        "id": "Rail Background",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "a73c3ca237f7ad1f353ce3404d8197e1"
+        },
+        "source": "BaseMap",
+        "source-layer": "polylines",
+        "minzoom": 12,
+        "filter": ["match", ["get", "WAYUSAGE"], ["RAILWAY"], true, false],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 90%)",
+            16,
+            "hsl(0, 0%, 87%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1, 22, 6]
+        }
+      },
+      {
+        "id": "Rail Foreground",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "a73c3ca237f7ad1f353ce3404d8197e1"
+        },
+        "source": "BaseMap",
+        "source-layer": "polylines",
+        "minzoom": 16,
+        "filter": ["match", ["get", "WAYUSAGE"], ["RAILWAY"], true, false],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            16,
+            2,
+            18,
+            2,
+            21,
+            2,
+            22,
+            4
+          ],
+          "line-color": "hsl(0, 0%, 94%)",
+          "line-dasharray": [
+            "step",
+            ["zoom"],
+            ["literal", [1, 1]],
+            16,
+            ["literal", [1, 1]],
+            17,
+            ["literal", [1, 1]],
+            18,
+            ["literal", [2, 2]],
+            20,
+            ["literal", [4, 4]],
+            22,
+            ["literal", [8, 8]]
+          ]
+        }
+      },
+      {
+        "id": "Not Drivable Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["NotDrivable"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Walkway Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "hsl(0, 0%, 80%)",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Unpaved Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Unpaved"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Private Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 16,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Private"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 3, 22, 19],
+          "line-color": "#a8a8a8",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Bus Only Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["BusOnly"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 4, 22, 24],
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Ramp Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Ramp", "TollRamp"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            4.5,
+            16,
+            6,
+            22,
+            22
+          ],
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Interchange Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 9,
+        "filter": [
+          "all",
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            ["Interchange", "TollInterchange"],
+            true,
+            false
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            14,
+            "#ffffff",
+            15,
+            "#bba877",
+            22,
+            "#bba877"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0,
+            16,
+            7,
+            22,
+            26
+          ],
+          "line-dasharray": [
+            "step",
+            ["zoom"],
+            ["literal", [1, 0]],
+            14,
+            ["literal", [1, 0]],
+            15,
+            ["literal", [0.1, 0.05]],
+            22,
+            ["literal", [0.1, 0.05]]
+          ]
+        }
+      },
+      {
+        "id": "Local Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Local"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            4.5,
+            16,
+            6,
+            22,
+            22
+          ],
+          "line-color": "hsl(0, 0%, 66%)",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Normal Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            14,
+            4,
+            16,
+            5,
+            22,
+            25
+          ],
+          "line-color": "#999999",
+          "line-dasharray": [0.1, 0.1]
+        }
+      },
+      {
+        "id": "Regional Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11.99,
+            0,
+            12,
+            2,
+            22,
+            26
+          ],
+          "line-color": "#999999",
+          "line-dasharray": [
+            "step",
+            ["zoom"],
+            ["literal", [1, 0]],
+            14,
+            ["literal", [1, 0]],
+            15,
+            ["literal", [0.1, 0.1]],
+            22,
+            ["literal", [0.1, 0.1]]
+          ]
+        }
+      },
+      {
+        "id": "Highway Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Highway", "TollRoad"], true, false],
+          ["match", ["get", "FUNCLASS"], ["1"], false, true],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-width": ["interpolate", ["linear"], ["zoom"], 12, 3, 22, 30],
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#ffffff",
+            10,
+            "hsl(0, 0%, 84%)",
+            22,
+            "hsl(0, 0%, 66%)"
+          ],
+          "line-dasharray": [
+            "step",
+            ["zoom"],
+            ["literal", [1, 0]],
+            14,
+            ["literal", [1, 0]],
+            15,
+            ["literal", [0.1, 0.1]],
+            22,
+            ["literal", [0.1, 0.1]]
+          ]
+        }
+      },
+      {
+        "id": "Carpool Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Carpool"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "#d0f5ed",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            9,
+            22,
+            28
+          ],
+          "line-dasharray": [
+            "step",
+            ["zoom"],
+            ["literal", [1, 0]],
+            14,
+            ["literal", [1, 0]],
+            15,
+            ["literal", [0.1, 0.05]],
+            22,
+            ["literal", [0.1, 0.05]]
+          ]
+        }
+      },
+      {
+        "id": "National Road Bridge Case",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          [
+            "any",
+            [
+              "match",
+              ["get", "LINEUSAGE"],
+              ["TollMotorway", "Motorway"],
+              true,
+              false
+            ],
+            [
+              "all",
+              [
+                "match",
+                ["get", "LINEUSAGE"],
+                ["TollRoad", "Highway"],
+                true,
+                false
+              ],
+              ["match", ["get", "FUNCLASS"], ["1"], true, false]
+            ]
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": "#bba877",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            11,
+            1,
+            16,
+            13,
+            22,
+            45
+          ],
+          "line-dasharray": [
+            "step",
+            ["zoom"],
+            ["literal", [1, 0]],
+            14,
+            ["literal", [1, 0]],
+            15,
+            ["literal", [0.1, 0.05]],
+            22,
+            ["literal", [0.1, 0.05]]
+          ]
+        }
+      },
+      {
+        "id": "Not Drivable Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["NotDrivable"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16]
+        }
+      },
+      {
+        "id": "Unpaved Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 10,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Unpaved"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            10,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16]
+        }
+      },
+      {
+        "id": "Walkway Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 14,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": ["step", ["zoom"], "#dbdbdb", 17, "#efefef"],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 17, 2, 22, 16]
+        }
+      },
+      {
+        "id": "Private Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Private"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 86%)",
+            16,
+            "hsl(0, 0%, 100%)",
+            22,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            13,
+            1,
+            16,
+            4,
+            22,
+            20
+          ]
+        }
+      },
+      {
+        "id": "Bus Only Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["BusOnly"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 89%)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 22, 22]
+        }
+      },
+      {
+        "id": "Ramp Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Ramp", "TollRamp"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            1,
+            16,
+            4,
+            22,
+            20
+          ]
+        }
+      },
+      {
+        "id": "Interchange Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 9,
+        "filter": [
+          "all",
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            ["Interchange", "TollInterchange"],
+            true,
+            false
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            "#f7bf45",
+            16,
+            "hsl(40, 85%, 87%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            4.5,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "Local Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Local"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 86%)",
+            12,
+            "hsl(0, 0%, 86%)",
+            14,
+            "hsl(0, 0%, 86%)",
+            15,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            1,
+            16,
+            4,
+            22,
+            20
+          ],
+          "line-opacity": {
+            "stops": [
+              [11, 1],
+              [12, 1]
+            ]
+          }
+        }
+      },
+      {
+        "id": "Normal Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "#ebebeb",
+            8,
+            "#ebebeb",
+            13,
+            "hsl(0, 0%, 86%)",
+            14,
+            "rgb(255, 255, 255)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0,
+            16,
+            1.5,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "Regional Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 7,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "step",
+            ["zoom"],
+            "hsl(0, 0%, 92%)",
+            11,
+            "hsl(0, 0%, 84%)",
+            12,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            10,
+            1,
+            11,
+            1,
+            12,
+            1,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "Highway Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Highway", "TollRoad"], true, false],
+          ["match", ["get", "FUNCLASS"], ["1"], false, true],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            9,
+            "#d6d6d6",
+            10.99,
+            "hsl(0, 0%, 84%)",
+            11,
+            "hsl(0, 0%, 100%)"
+          ],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 9, 1, 12, 2, 22, 26]
+        }
+      },
+      {
+        "id": "Carpool Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 8,
+        "filter": [
+          "all",
+          ["match", ["get", "LINEUSAGE"], ["Carpool"], true, false],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round"
+        },
+        "paint": {
+          "line-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#f7bf45",
+            16,
+            "#f7bf45",
+            17,
+            "hsl(41, 92%, 62%)"
+          ],
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            8,
+            0.5,
+            16,
+            4.5,
+            22,
+            24
+          ]
+        }
+      },
+      {
+        "id": "National Road Bridge",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "ce977a3ecd8eb571c73286e654187d27"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          [
+            "any",
+            [
+              "match",
+              ["get", "LINEUSAGE"],
+              ["TollMotorway", "Motorway"],
+              true,
+              false
+            ],
+            [
+              "all",
+              [
+                "match",
+                ["get", "LINEUSAGE"],
+                ["TollRoad", "Highway"],
+                true,
+                false
+              ],
+              ["match", ["get", "FUNCLASS"], ["1"], true, false]
+            ]
+          ],
+          ["match", ["get", "DCBRIDGE"], ["T"], true, false]
+        ],
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "hsl(41, 92%, 62%)",
+          "line-width": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            7,
+            0.25,
+            15,
+            6,
+            22,
+            38
+          ]
+        }
+      },
+      {
+        "id": "Building Footprints",
+        "type": "fill",
+        "metadata": {
+          "mapbox:group": "abb42a322bf85bd188b5720d376652a2"
+        },
+        "source": "BaseMap",
+        "source-layer": "buildings",
+        "minzoom": 17,
+        "layout": {
+          "visibility": "none"
+        },
+        "paint": {
+          "fill-color": "hsl(0, 0%, 82%)",
+          "fill-opacity": 0.28
+        }
+      },
+      {
+        "id": "Building Outlines",
+        "type": "line",
+        "metadata": {
+          "mapbox:group": "abb42a322bf85bd188b5720d376652a2"
+        },
+        "source": "BaseMap",
+        "source-layer": "buildings",
+        "minzoom": 17,
+        "layout": {
+          "visibility": "none"
+        },
+        "paint": {
+          "line-color": "hsl(0, 0%, 87%)"
+        }
+      },
+      {
+        "id": "3-D Buildings",
+        "type": "fill-extrusion",
+        "source": "BaseMap",
+        "source-layer": "buildings",
+        "minzoom": 14,
+        "layout": {},
+        "paint": {
+          "fill-extrusion-color": "hsl(0, 0%, 90%)",
+          "fill-extrusion-height": [
+            "case",
+            ["all", ["has", "HEIGHT"], ["!=", ["get", "HEIGHT"], 0]],
+            ["to-number", ["get", "HEIGHT"]],
+            ["all", ["has", "BLEVELS"], ["!=", ["get", "BLEVELS"], 0]],
+            ["*", ["to-number", ["get", "BLEVELS"]], 4],
+            8
+          ],
+          "fill-extrusion-opacity": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            15,
+            0,
+            16,
+            0.75,
+            22,
+            0.75
+          ]
+        }
+      },
+      {
+        "id": "Indian Reservation Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 1,
+        "filter": ["match", ["get", "AREAUSAGE"], ["RESERVATION"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 8, 22, 22],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "#666666",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Military Base Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 1,
+        "filter": ["match", ["get", "AREAUSAGE"], ["MILITARY"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 8, 22, 22],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "#666666",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "City Park Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": ["match", ["get", "AREAUSAGE"], ["PARK_CITY"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 22, 16],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "#385525",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Golf Course Labels ",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": ["match", ["get", "AREAUSAGE"], ["GOLF"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 22, 16],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "hsl(96, 39%, 24%)",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Cemetary Labels ",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": ["match", ["get", "AREAUSAGE"], ["CEMETARY"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 22, 16],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "hsl(96, 39%, 24%)",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Airport Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 7,
+        "filter": ["match", ["get", "AREAUSAGE"], ["AIRPORT"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 22, 26],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "#666666",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "School Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": ["match", ["get", "AREAUSAGE"], ["UNIVERSITY"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 8, 22, 22],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "#876d12",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Shopping Center Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": [
+          "match",
+          ["get", "AREAUSAGE"],
+          ["SHOPPING_CENTER"],
+          true,
+          false
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 8, 22, 22],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "#875c12",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Sports Complex Labels ",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": [
+          "match",
+          ["get", "AREAUSAGE"],
+          ["SPORTS_COMPLEX"],
+          true,
+          false
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 8, 22, 22],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "hsl(194, 76%, 28%)",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Hospital Labels ",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "ecd50c6ac3288efedc155bd6a5df986e"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 9,
+        "filter": ["match", ["get", "AREAUSAGE"], ["HOSPITAL"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 8, 22, 22],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-color": "hsl(6, 58%, 22%)",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Lake Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "2f6641263107636dc7fbcbae46f436af"
+        },
+        "source": "BaseMap",
+        "source-layer": "polygon_labels",
+        "minzoom": 7,
+        "filter": ["match", ["get", "AREAUSAGE"], ["LAKE"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 22, 18],
+          "text-font": ["Roboto Italic"]
+        },
+        "paint": {
+          "text-color": "#146b8a",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "River Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "2f6641263107636dc7fbcbae46f436af"
+        },
+        "source": "BaseMap",
+        "source-layer": "polylines",
+        "minzoom": 11,
+        "filter": ["match", ["get", "WAYUSAGE"], ["WATERWAY"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Roboto Italic"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10, 22, 18],
+          "symbol-placement": "line",
+          "symbol-spacing": 600
+        },
+        "paint": {
+          "text-color": "hsl(196, 75%, 31%)",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Water Ferry Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "2f6641263107636dc7fbcbae46f436af"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": ["match", ["get", "LINEUSAGE"], ["FerryBoat"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "symbol-placement": "line",
+          "text-pitch-alignment": "viewport",
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 0, 0, 16, 16]
+        },
+        "paint": {
+          "text-color": "hsl(217, 54%, 36%)",
+          "text-halo-color": "#ffffff",
+          "text-halo-width": 1,
+          "text-halo-blur": 1
+        }
+      },
+      {
+        "id": "Motorway Oneway",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 17,
+        "filter": [
+          "all",
+          ["match", ["get", "ONEWAY"], ["FT", "TF"], true, false],
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            [
+              "Motorway",
+              "TollMotorway",
+              "Interchange",
+              "TollInterchange",
+              "Carpool"
+            ],
+            true,
+            false
+          ]
+        ],
+        "layout": {
+          "symbol-spacing": 200,
+          "symbol-placement": "line",
+          "icon-image": [
+            "match",
+            ["get", "ONEWAY"],
+            ["FT"],
+            "onewayarrow_white",
+            ["TF"],
+            "onewayarrow_whiteleft",
+            ""
+          ],
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 17, 0.5, 22, 1]
+        },
+        "paint": {}
+      },
+      {
+        "id": "Local Oneway",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 17,
+        "filter": [
+          "all",
+          ["match", ["get", "ONEWAY"], ["FT", "TF"], true, false],
+          [
+            "match",
+            ["get", "LINEUSAGE"],
+            [
+              "Regional",
+              "Normal",
+              "Local",
+              "Highway",
+              "TollRoad",
+              "Private",
+              "Parking",
+              "Unpaved",
+              "BusOnly",
+              "TollRamp",
+              "Ramp"
+            ],
+            true,
+            false
+          ]
+        ],
+        "layout": {
+          "symbol-spacing": 200,
+          "symbol-placement": "line",
+          "icon-image": [
+            "match",
+            ["get", "ONEWAY"],
+            ["FT"],
+            "onewayarrow_blue",
+            ["TF"],
+            "onewayarrow_blueleft",
+            ""
+          ],
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 17, 0.5, 22, 1]
+        },
+        "paint": {}
+      },
+      {
+        "id": "Walkway Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 15,
+        "filter": ["match", ["get", "LINEUSAGE"], ["Walkway"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 17, 12, 22, 16],
+          "text-pitch-alignment": "viewport",
+          "symbol-placement": "line",
+          "symbol-spacing": 500
+        },
+        "paint": {
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1,
+          "text-halo-blur": 1,
+          "text-color": "#333333"
+        }
+      },
+      {
+        "id": "Local and Minor Road Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 12,
+        "filter": [
+          "match",
+          ["get", "LINEUSAGE"],
+          ["Local", "NotDrivable", "Unpaved", "Private"],
+          true,
+          false
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 15, 12, 22, 17],
+          "text-pitch-alignment": "viewport",
+          "symbol-placement": "line",
+          "symbol-spacing": 500
+        },
+        "paint": {
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1,
+          "text-halo-blur": 1,
+          "text-color": "#333333"
+        }
+      },
+      {
+        "id": "Normal Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": ["match", ["get", "LINEUSAGE"], ["Normal"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 13, 10, 22, 18],
+          "text-pitch-alignment": "viewport",
+          "symbol-placement": "line",
+          "symbol-spacing": 500
+        },
+        "paint": {
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1,
+          "text-halo-blur": 1,
+          "text-color": "#333333"
+        }
+      },
+      {
+        "id": "Regional Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": ["match", ["get", "LINEUSAGE"], ["Regional"], true, false],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 12, 10, 22, 22],
+          "text-pitch-alignment": "viewport",
+          "symbol-placement": "line",
+          "symbol-spacing": 500
+        },
+        "paint": {
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1,
+          "text-halo-blur": 1,
+          "text-color": "#333333"
+        }
+      },
+      {
+        "id": "Highway Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "match",
+          ["get", "LINEUSAGE"],
+          ["Highway", "TollRoad"],
+          true,
+          false
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 12, 10, 22, 22],
+          "text-pitch-alignment": "viewport",
+          "symbol-placement": "line",
+          "symbol-spacing": 500
+        },
+        "paint": {
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1.5,
+          "text-halo-blur": 1,
+          "text-color": "#333333"
+        }
+      },
+      {
+        "id": "National Labels",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 11,
+        "filter": [
+          "match",
+          ["get", "LINEUSAGE"],
+          ["TollMotorway", "Motorway"],
+          true,
+          false
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 12, 22, 24],
+          "text-pitch-alignment": "viewport",
+          "symbol-placement": "line",
+          "text-offset": [0, 0],
+          "symbol-spacing": 500
+        },
+        "paint": {
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-blur": 1,
+          "text-halo-width": 1.5
+        }
+      },
+      {
+        "id": "Highway Shield - Tertiary",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          [
+            "step",
+            ["zoom"],
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 1],
+            8,
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 2],
+            10,
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 3],
+            12,
+            true
+          ],
+          ["has", "shield3"]
+        ],
+        "layout": {
+          "text-size": ["interpolate", ["linear"], ["zoom"], 8, 8, 22, 12],
+          "icon-image": [
+            "match",
+            ["get", "shield3"],
+            ["us_tx_tbt"],
+            "us_tx_tpt",
+            ["to-string", ["get", "shield3"]]
+          ],
+          "icon-rotation-alignment": "viewport",
+          "text-max-angle": 38,
+          "symbol-spacing": [
+            "interpolate",
+            ["exponential", 1],
+            ["zoom"],
+            4,
+            100,
+            22,
+            400
+          ],
+          "text-font": ["Open Sans SemiBold"],
+          "symbol-placement": "line",
+          "text-rotation-alignment": "viewport",
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 8, 0.75, 22, 1],
+          "text-field": [
+            "case",
+            ["has", "ref3"],
+            [
+              "case",
+              ["match", ["get", "ref3"], [""], true, false],
+              "x",
+              ["get", "ref3"]
+            ],
+            "x"
+          ]
+        },
+        "paint": {
+          "text-color": [
+            "case",
+            ["==", ["get", "shield_color3"], "white"],
+            "#ffffff",
+            "#000000"
+          ],
+          "text-opacity": [
+            "case",
+            [
+              "any",
+              ["match", ["get", "shield_color3"], ["clear"], true, false],
+              ["match", ["get", "ref3"], [""], true, false]
+            ],
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "id": "Highway Shield - Secondary",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          [
+            "step",
+            ["zoom"],
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 1],
+            8,
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 2],
+            10,
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 3],
+            12,
+            true
+          ],
+          ["has", "shield2"]
+        ],
+        "layout": {
+          "text-size": ["interpolate", ["linear"], ["zoom"], 8, 8, 22, 16],
+          "icon-image": [
+            "match",
+            ["get", "shield2"],
+            ["us_tx_tbt"],
+            "us_tx_tpt",
+            ["to-string", ["get", "shield2"]]
+          ],
+          "icon-rotation-alignment": "viewport",
+          "text-max-angle": 38,
+          "symbol-spacing": [
+            "interpolate",
+            ["exponential", 1],
+            ["zoom"],
+            4,
+            100,
+            22,
+            400
+          ],
+          "text-font": ["Open Sans SemiBold"],
+          "symbol-placement": "line",
+          "text-rotation-alignment": "viewport",
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 8, 0.75, 22, 1],
+          "text-field": [
+            "case",
+            ["has", "ref2"],
+            [
+              "case",
+              ["match", ["get", "ref2"], [""], true, false],
+              "x",
+              ["get", "ref2"]
+            ],
+            "x"
+          ]
+        },
+        "paint": {
+          "text-color": [
+            "case",
+            ["==", ["get", "shield_color2"], "white"],
+            "#ffffff",
+            "#000000"
+          ],
+          "text-opacity": [
+            "case",
+            [
+              "any",
+              ["match", ["get", "shield_color2"], ["clear"], true, false],
+              ["match", ["get", "ref2"], [""], true, false]
+            ],
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "id": "Highway Shield - Primary",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "7666ab2107339734f492e34366f5b5e4"
+        },
+        "source": "BaseMap",
+        "source-layer": "roads",
+        "minzoom": 5,
+        "filter": [
+          "all",
+          [
+            "step",
+            ["zoom"],
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 1],
+            8,
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 2],
+            10,
+            ["<=", ["to-number", ["get", "FUNCLASS"]], 3],
+            12,
+            true
+          ],
+          ["has", "shield1"]
+        ],
+        "layout": {
+          "text-size": ["interpolate", ["linear"], ["zoom"], 8, 8, 22, 16],
+          "icon-image": [
+            "match",
+            ["get", "shield1"],
+            ["us_tx_tbt"],
+            "us_tx_tpt",
+            ["ca_nb_w"],
+            "ca_nb_collector_w",
+            ["to-string", ["get", "shield1"]]
+          ],
+          "icon-rotation-alignment": "viewport",
+          "text-max-angle": 38,
+          "symbol-spacing": [
+            "interpolate",
+            ["exponential", 1],
+            ["zoom"],
+            4,
+            150,
+            22,
+            600
+          ],
+          "text-font": ["Open Sans SemiBold"],
+          "symbol-placement": "line",
+          "text-rotation-alignment": "viewport",
+          "icon-size": ["interpolate", ["linear"], ["zoom"], 8, 0.75, 22, 1],
+          "text-field": [
+            "case",
+            ["has", "ref1"],
+            [
+              "case",
+              ["match", ["get", "ref1"], [""], true, false],
+              "x",
+              ["get", "ref1"]
+            ],
+            "x"
+          ]
+        },
+        "paint": {
+          "text-opacity": [
+            "case",
+            [
+              "any",
+              ["match", ["get", "shield_color1"], ["clear"], true, false],
+              ["match", ["get", "ref1"], [""], true, false]
+            ],
+            0,
+            1
+          ],
+          "text-color": [
+            "case",
+            ["==", ["get", "shield_color1"], "white"],
+            "#ffffff",
+            ["==", ["get", "shield_color1"], "clear"],
+            "#ffffff",
+            "#000000"
+          ]
+        }
+      },
+      {
+        "id": "Hamlets",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "minzoom": 5,
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["8"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-font": ["Arial Unicode MS Regular"],
+          "text-size": 12
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": "#666666"
+        }
+      },
+      {
+        "id": "Villages",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["7"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": 12,
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": "#666666"
+        }
+      },
+      {
+        "id": "Minor Towns",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["6"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 11, 12, 15, 16],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": "#666666"
+        }
+      },
+      {
+        "id": "Major Towns",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["5"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 8, 10, 15, 18],
+          "text-font": ["Arial Unicode MS Regular"]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            10,
+            "hsl(0, 0%, 40%)",
+            15,
+            "#333333"
+          ]
+        }
+      },
+      {
+        "id": "Minor Cities",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["4"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 7, 10, 15, 22],
+          "text-font": [
+            "step",
+            ["zoom"],
+            ["literal", ["Arial Unicode MS Regular"]],
+            13,
+            ["literal", ["Arial Unicode MS Bold"]],
+            22,
+            ["literal", ["Arial Unicode MS Regular"]]
+          ]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#000000",
+            13,
+            "#999999"
+          ],
+          "text-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 13, 1]
+        }
+      },
+      {
+        "id": "Medium Cities",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "minzoom": 5,
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["3"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 6, 10, 15, 20],
+          "text-font": [
+            "step",
+            ["zoom"],
+            ["literal", ["Arial Unicode MS Regular"]],
+            12,
+            ["literal", ["Arial Unicode MS Bold"]],
+            22,
+            ["literal", ["Arial Unicode MS Regular"]]
+          ]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#000000",
+            13,
+            "#999999"
+          ],
+          "text-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 13, 1]
+        }
+      },
+      {
+        "id": "Major Cities",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["2"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 15, 24],
+          "text-font": [
+            "step",
+            ["zoom"],
+            ["literal", ["Arial Unicode MS Regular"]],
+            11,
+            ["literal", ["Arial Unicode MS Bold"]],
+            22,
+            ["literal", ["Arial Unicode MS Regular"]]
+          ]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#000000",
+            13,
+            "#999999"
+          ],
+          "text-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 13, 1]
+        }
+      },
+      {
+        "id": "Big Cities",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["1"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 5, 13, 14, 24],
+          "text-font": [
+            "step",
+            ["zoom"],
+            ["literal", ["Arial Unicode MS Regular"]],
+            10,
+            ["literal", ["Arial Unicode MS Bold"]],
+            22,
+            ["literal", ["Arial Unicode MS Regular"]]
+          ]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#000000",
+            13,
+            "#999999"
+          ],
+          "text-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 13, 1]
+        }
+      },
+      {
+        "id": "Mega Cities",
+        "type": "symbol",
+        "metadata": {
+          "mapbox:group": "846b4d8fe72eaee67a87edee73a7d2ef"
+        },
+        "source": "BaseMap",
+        "source-layer": "point_labels",
+        "maxzoom": 15,
+        "filter": [
+          "all",
+          ["match", ["get", "TYPE"], ["13"], true, false],
+          ["match", ["get", "SUBTYPE"], ["0"], true, false]
+        ],
+        "layout": {
+          "text-field": ["to-string", ["get", "NAME"]],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 5, 13, 14, 24],
+          "text-font": [
+            "step",
+            ["zoom"],
+            ["literal", ["Arial Unicode MS Regular"]],
+            10,
+            ["literal", ["Arial Unicode MS Bold"]],
+            22,
+            ["literal", ["Arial Unicode MS Regular"]]
+          ]
+        },
+        "paint": {
+          "text-halo-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "hsl(0, 0%, 100%)",
+            22,
+            "#ffffff"
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0,
+            "#000000",
+            13,
+            "#999999"
+          ],
+          "text-opacity": ["interpolate", ["linear"], ["zoom"], 0, 1, 13, 1]
+        }
+      }
+    ],
+    "created": "2023-07-04T22:08:17.874Z",
+    "id": "ck9t1cc6u01yo1inxe3tqv3nm",
+    "modified": "2023-07-07T00:30:53.373Z",
+    "owner": "ispc",
+    "visibility": "private",
+    "draft": false
+  }
+  

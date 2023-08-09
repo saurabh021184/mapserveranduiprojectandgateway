@@ -1,0 +1,119 @@
+{
+    "name": "/mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/mbtiles/ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads.mbtiles",
+    "description": "/mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/mbtiles/ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads.mbtiles",
+    "version": "2",
+    "minzoom": 0,
+    "maxzoom": 16,
+    "center": [
+        -73.622131,
+        41.027571,
+        16
+    ],
+    "bounds": [
+        -73.726387,
+        40.950943,
+        -71.787651,
+        42.05051
+    ],
+    "type": "overlay",
+    "format": "pbf",
+    "generator": "tippecanoe v1.36.0",
+    "generator_options": "/usr/local/bin/tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping -ac -J filter_TOSM.json /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/buildings.geojson /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/point_labels.geojson /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/polygons.geojson /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/polygon_labels.geojson /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/polylines.geojson /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/roads.geojson -o /mnt/d/TOSM_Mbtile_Data_Processing/Mapbox/Data/out/us/ct/ct_ovr/mbtiles/ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads.mbtiles",
+    "vector_layers": [
+        {
+            "id": "buildings",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "BLEVELS": "String",
+                "BPART": "String",
+                "HEIGHT": "Number"
+            },
+            "source": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads",
+            "source_name": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads"
+        },
+        {
+            "id": "point_labels",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "NAME": "String",
+                "POINTUSAGE": "String",
+                "SUBTYPE": "String",
+                "TYPE": "String"
+            },
+            "source": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads",
+            "source_name": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads"
+        },
+        {
+            "id": "polygon_labels",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "AREAUSAGE": "String",
+                "NAME": "String"
+            },
+            "source": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads",
+            "source_name": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads"
+        },
+        {
+            "id": "polygons",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "AREAUSAGE": "String"
+            },
+            "source": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads",
+            "source_name": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads"
+        },
+        {
+            "id": "polylines",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "NAME": "String",
+                "WAYUSAGE": "String"
+            },
+            "source": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads",
+            "source_name": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads"
+        },
+        {
+            "id": "roads",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "DCBRIDGE": "String",
+                "DCRAMP": "String",
+                "DCTUNNEL": "String",
+                "FUNCLASS": "String",
+                "LINEUSAGE": "String",
+                "NAME": "String",
+                "ONEWAY": "String",
+                "minzoom": "Number",
+                "ref1": "String",
+                "ref2": "String",
+                "ref3": "String",
+                "roadlayer": "String",
+                "shield1": "String",
+                "shield2": "String",
+                "shield3": "String",
+                "shield_color1": "String",
+                "shield_color2": "String",
+                "shield_color3": "String"
+            },
+            "source": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads",
+            "source_name": "ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads"
+        }
+    ],
+    "scheme": "xyz",
+    "tilejson": "2.2.0",
+    "tiles": [
+        "{host}/tilesets/ct_ovr_buildings_point_labels_polygons_polygon_labels_polylines_roads/tiles/{z}/{x}/{y}.pbf"
+    ]
+}

@@ -1,0 +1,1709 @@
+{
+    "name": "/home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_60_place_.mbtiles + /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_49_place_.mbtiles + /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_56_place_.mbtiles",
+    "description": "/home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_30_place_.mbtiles",
+    "version": "2",
+    "minzoom": 0,
+    "maxzoom": 16,
+    "center": [
+        -151.685486,
+        59.848954,
+        16
+    ],
+    "bounds": [
+        -176.698608,
+        -14.42404,
+        174.160767,
+        71.341256
+    ],
+    "type": "overlay",
+    "format": "pbf",
+    "generator": "tile-join v1.36.0",
+    "generator_options": "tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_60_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_32_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_60_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_49_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_41_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_49_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_56_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_08_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_56_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_31_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_35_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_31_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_06_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_31_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_06_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_40_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_49_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_40_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_53_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_40_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_53_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_38_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_48_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_38_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_08_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_27_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_08_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_48_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_19_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_48_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_16_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_05_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_16_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_22_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_15_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_22_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_29_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_22_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_29_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_28_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_56_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_28_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_19_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_17_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_19_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_18_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_38_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_18_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_04_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_18_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_04_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_26_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_26_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_26_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_21_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_30_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_21_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_15_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_21_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_15_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_47_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_04_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_47_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_13_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_53_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_13_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_20_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_13_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_20_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_39_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_47_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_39_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_12_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_01_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_12_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_17_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_12_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_17_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_05_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_45_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_05_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_54_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_46_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_54_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_11_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_11_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_11_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_32_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_37_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_32_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_51_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_55_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_51_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_37_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_51_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_37_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_24_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_39_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_24_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_41_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_24_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_41_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_27_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_10_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_27_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_10_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_42_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_10_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_34_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_54_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_34_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_01_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_34_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_01_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_36_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_29_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_36_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_35_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_36_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_35_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_50_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_16_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_50_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_55_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_44_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_55_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_33_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_06_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_33_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_45_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_33_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_45_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_25_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_60_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_25_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_42_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_25_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_42_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_23_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_28_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_23_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_72_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_20_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_72_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_46_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_72_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_46_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_78_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_23_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_78_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_44_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_78_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_44_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_66_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_09_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_66_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_09_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_66_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_09_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_69_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_69_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_69_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_02_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_50_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_02_place_.mbtiles; tippecanoe -z16 -r1 -f --no-feature-limit --coalesce-densest-as-needed --extend-zooms-if-still-dropping /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_30_place_label.geojson /home/sajjadhussain/coding/GIS/app/data/geojsonfiles/tl_rd22_02_place_polygon.geojson -o /home/sajjadhussain/coding/GIS/app/data/mbtilefiles/tl_rd22_30_place_.mbtiles; tile-join -o usa_cities.mbtiles city/tl_rd22_01_place_.mbtiles city/tl_rd22_02_place_.mbtiles city/tl_rd22_04_place_.mbtiles city/tl_rd22_05_place_.mbtiles city/tl_rd22_06_place_.mbtiles city/tl_rd22_08_place_.mbtiles city/tl_rd22_09_place_.mbtiles city/tl_rd22_10_place_.mbtiles city/tl_rd22_11_place_.mbtiles city/tl_rd22_12_place_.mbtiles city/tl_rd22_13_place_.mbtiles city/tl_rd22_15_place_.mbtiles city/tl_rd22_16_place_.mbtiles city/tl_rd22_17_place_.mbtiles city/tl_rd22_18_place_.mbtiles city/tl_rd22_19_place_.mbtiles city/tl_rd22_20_place_.mbtiles city/tl_rd22_21_place_.mbtiles city/tl_rd22_22_place_.mbtiles city/tl_rd22_23_place_.mbtiles city/tl_rd22_24_place_.mbtiles city/tl_rd22_25_place_.mbtiles city/tl_rd22_26_place_.mbtiles city/tl_rd22_27_place_.mbtiles city/tl_rd22_28_place_.mbtiles city/tl_rd22_29_place_.mbtiles city/tl_rd22_30_place_.mbtiles city/tl_rd22_31_place_.mbtiles city/tl_rd22_32_place_.mbtiles city/tl_rd22_33_place_.mbtiles city/tl_rd22_34_place_.mbtiles city/tl_rd22_35_place_.mbtiles city/tl_rd22_36_place_.mbtiles city/tl_rd22_37_place_.mbtiles city/tl_rd22_38_place_.mbtiles city/tl_rd22_39_place_.mbtiles city/tl_rd22_40_place_.mbtiles city/tl_rd22_41_place_.mbtiles city/tl_rd22_42_place_.mbtiles city/tl_rd22_44_place_.mbtiles city/tl_rd22_45_place_.mbtiles city/tl_rd22_46_place_.mbtiles city/tl_rd22_47_place_.mbtiles city/tl_rd22_48_place_.mbtiles city/tl_rd22_49_place_.mbtiles city/tl_rd22_50_place_.mbtiles city/tl_rd22_51_place_.mbtiles city/tl_rd22_53_place_.mbtiles city/tl_rd22_54_place_.mbtiles city/tl_rd22_55_place_.mbtiles city/tl_rd22_56_place_.mbtiles city/tl_rd22_60_place_.mbtiles city/tl_rd22_66_place_.mbtiles city/tl_rd22_69_place_.mbtiles city/tl_rd22_72_place_.mbtiles city/tl_rd22_78_place_.mbtiles",
+    "vector_layers": [
+        {
+            "id": "tl_rd22_01_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_01_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_02_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_02_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_04_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_04_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_05_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_05_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_06_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_06_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_08_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_08_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_09_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_09_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_10_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_10_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_11_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_11_place_polygon",
+            "description": "",
+            "minzoom": 1,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_12_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_12_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_13_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_13_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_15_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_15_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_16_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_16_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_17_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_17_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_18_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_18_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_19_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_19_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_20_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_20_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_21_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_21_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_22_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_22_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_23_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_23_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_24_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_24_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_25_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_25_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_26_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_26_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_27_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_27_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_28_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_28_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_29_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_29_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_30_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_30_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_31_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_31_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_32_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_32_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_33_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_33_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_34_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_34_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_35_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_35_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_36_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_36_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_37_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_37_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_38_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_38_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_39_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_39_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_40_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_40_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_41_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_41_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_42_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_42_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_44_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_44_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_45_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_45_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_46_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_46_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_47_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_47_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_48_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_48_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_49_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_49_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_50_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_50_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_51_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_51_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_53_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_53_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_54_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_54_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_55_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_55_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_56_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_56_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_60_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_60_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_66_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_66_place_polygon",
+            "description": "",
+            "minzoom": 1,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_69_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_69_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_72_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_72_place_polygon",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_78_place_label",
+            "description": "",
+            "minzoom": 0,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        },
+        {
+            "id": "tl_rd22_78_place_polygon",
+            "description": "",
+            "minzoom": 2,
+            "maxzoom": 16,
+            "fields": {
+                "GEOID": "String",
+                "LSAD": "String",
+                "NAME": "String",
+                "PLACENS": "String",
+                "STATEFP": "String"
+            },
+            "source": "usa_cities",
+            "source_name": "usa_cities"
+        }
+    ],
+    "scheme": "xyz",
+    "tilejson": "2.2.0",
+    "tiles": [
+        "{host}/tilesets/usa_cities/tiles/{z}/{x}/{y}.pbf"
+    ]
+}
